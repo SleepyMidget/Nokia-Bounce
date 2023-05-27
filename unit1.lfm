@@ -1,0 +1,67 @@
+object BounceForm: TBounceForm
+  Left = 549
+  Height = 460
+  Top = 196
+  Width = 696
+  Caption = 'Bounce'
+  ClientHeight = 460
+  ClientWidth = 696
+  OnCreate = FormCreate
+  OnShow = FormShow
+  LCLVersion = '2.2.6.0'
+  object MenuImage: TImage
+    Left = 48
+    Height = 400
+    Top = 32
+    Width = 600
+    OnClick = MenuImageClick
+  end
+  object PlayButton: TButton
+    Left = 312
+    Height = 25
+    Top = 232
+    Width = 75
+    Caption = 'Play'
+    OnClick = PlayButtonClick
+    TabOrder = 0
+  end
+  object ExitButton: TButton
+    Left = 312
+    Height = 25
+    Top = 256
+    Width = 75
+    Caption = 'Exit'
+    OnClick = ExitButtonClick
+    TabOrder = 1
+  end
+  object MenuLabel: TLabel
+    Left = 192
+    Height = 15
+    Top = 152
+    Width = 59
+    Caption = 'MenuLable'
+    ParentColor = False
+  end
+  object TutorialLabel: TLabel
+    Left = 328
+    Height = 15
+    Top = 288
+    Width = 51
+    Caption = 'Controls :'
+    ParentColor = False
+  end
+  object Label1: TLabel
+    Left = 304
+    Height = 45
+    Top = 312
+    Width = 97
+    Caption = 'W or Space : Jump'#13#10'A                  : Left'#13#10'D                  : Right'
+    ParentColor = False
+  end
+  object TimerBounce: TTimer
+    Interval = 10
+    OnTimer = TimerBounceTimer
+    Left = 160
+    Top = 80
+  end
+end

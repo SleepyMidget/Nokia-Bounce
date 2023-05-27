@@ -1,0 +1,8 @@
+object Tutorial: TTutorial
+  Left = 455
+  Height = 240
+  Top = 157
+  Width = 320
+  Caption = 'Tutorial'
+  LCLVersion = '2.2.4.0'
+end

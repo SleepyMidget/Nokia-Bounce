@@ -1,0 +1,498 @@
+object Stage: TStage
+  Left = 227
+  Height = 568
+  Top = 155
+  Width = 1336
+  Anchors = [akTop, akLeft, akRight]
+  Caption = 'Stage'
+  ClientHeight = 568
+  ClientWidth = 1336
+  OnCreate = FormCreate
+  OnKeyDown = FormKeyDown
+  OnKeyUp = FormKeyUp
+  LCLVersion = '2.2.6.0'
+  object Ball: TShape
+    Left = 42
+    Height = 30
+    Top = 496
+    Width = 30
+    Brush.Color = clRed
+    Shape = stCircle
+  end
+  object Platform2: TShape
+    Left = -8
+    Height = 33
+    Top = 544
+    Width = 801
+    Anchors = [akBottom]
+  end
+  object platform1: TShape
+    Left = 783
+    Height = 473
+    Top = 103
+    Width = 64
+    Anchors = [akBottom]
+  end
+  object Platform3: TShape
+    Left = 720
+    Height = 17
+    Top = 464
+    Width = 64
+    Anchors = [akBottom]
+  end
+  object Platform4: TShape
+    Left = 592
+    Height = 17
+    Top = 399
+    Width = 64
+    Anchors = [akBottom]
+  end
+  object Platform5: TShape
+    Left = 446
+    Height = 17
+    Top = 360
+    Width = 112
+    Anchors = [akBottom]
+  end
+  object Platform6: TShape
+    Left = 328
+    Height = 17
+    Top = 368
+    Width = 80
+    Anchors = [akBottom]
+  end
+  object Platform9: TShape
+    Left = 147
+    Height = 17
+    Top = 223
+    Width = 72
+    Anchors = [akBottom]
+  end
+  object Platform7: TShape
+    Left = 141
+    Height = 16
+    Top = 368
+    Width = 104
+    Anchors = [akBottom]
+    OnChangeBounds = Platform7ChangeBounds
+  end
+  object Platform10: TShape
+    Left = 312
+    Height = 17
+    Top = 191
+    Width = 64
+    Anchors = [akBottom]
+  end
+  object Platform11: TShape
+    Left = 482
+    Height = 17
+    Top = 162
+    Width = 76
+    Anchors = [akBottom]
+  end
+  object Spike1: TShape
+    Left = 484
+    Height = 24
+    Top = 336
+    Width = 24
+    Anchors = [akBottom]
+    Shape = stTriangle
+  end
+  object Label1: TLabel
+    Left = 38
+    Height = 15
+    Top = 39
+    Width = 34
+    Caption = 'Label1'
+    ParentColor = False
+  end
+  object Spike2: TShape
+    Left = 368
+    Height = 24
+    Top = 520
+    Width = 24
+    Anchors = [akBottom]
+    Shape = stTriangle
+  end
+  object Spike3: TShape
+    Left = 141
+    Height = 24
+    Top = 520
+    Width = 24
+    Anchors = [akBottom]
+    Shape = stTriangle
+  end
+  object Spike4: TShape
+    Left = 532
+    Height = 24
+    Top = 520
+    Width = 24
+    Anchors = [akBottom]
+    Shape = stTriangle
+  end
+  object spike5: TShape
+    Left = 241
+    Height = 17
+    Top = 368
+    Width = 88
+    Anchors = [akBottom]
+    Brush.Color = clRed
+  end
+  object spike6: TShape
+    Left = 141
+    Height = 24
+    Top = 384
+    Width = 24
+    Shape = stTriangleDown
+  end
+  object spike7: TShape
+    Left = 532
+    Height = 24
+    Top = 376
+    Width = 24
+    Shape = stTriangleDown
+  end
+  object spike8: TShape
+    Left = 368
+    Height = 24
+    Top = 384
+    Width = 24
+    Shape = stTriangleDown
+  end
+  object spike9: TShape
+    Left = 218
+    Height = 17
+    Top = 223
+    Width = 88
+    Anchors = [akBottom]
+    Brush.Color = clRed
+  end
+  object spike10: TShape
+    Left = 374
+    Height = 17
+    Top = 191
+    Width = 88
+    Anchors = [akBottom]
+    Brush.Color = clRed
+  end
+  object spike11: TShape
+    Left = 560
+    Height = 17
+    Top = 162
+    Width = 88
+    Anchors = [akBottom]
+    Brush.Color = clRed
+  end
+  object Platform8: TShape
+    Left = 64
+    Height = 17
+    Top = 296
+    Width = 72
+    Anchors = [akBottom]
+  end
+  object spike12: TShape
+    Left = 0
+    Height = 17
+    Top = 223
+    Width = 72
+    Anchors = [akBottom]
+    Brush.Color = clRed
+    OnChangeBounds = spike12ChangeBounds
+  end
+  object GameOverLabel: TLabel
+    Left = 464
+    Height = 117
+    Top = 184
+    Width = 476
+    Caption = 'GAME OVER !'
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -96
+    Font.Name = 'Impact'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+    Visible = False
+    OnClick = GameOverLabelClick
+  end
+  object RetryLabel: TLabel
+    Left = 648
+    Height = 49
+    Top = 279
+    Width = 110
+    Caption = 'Retry'
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -37
+    Font.Name = 'Cascadia Mono Light'
+    Font.Pitch = fpFixed
+    Font.Quality = fqDraft
+    ParentColor = False
+    ParentFont = False
+    Visible = False
+    OnClick = RetryLabelClick
+    OnMouseEnter = RetryLabelMouseEnter
+    OnMouseLeave = RetryLabelMouseLeave
+  end
+  object Platform18: TShape
+    Left = 1087
+    Height = 17
+    Top = 415
+    Width = 72
+    Anchors = [akBottom]
+  end
+  object spike13: TShape
+    Left = 1000
+    Height = 17
+    Top = 415
+    Width = 88
+    Anchors = [akBottom]
+    Brush.Color = clRed
+  end
+  object PoleFinish: TShape
+    Left = 1280
+    Height = 105
+    Top = 430
+    Width = 7
+    Brush.Color = clRed
+  end
+  object FlagFinish: TShape
+    Left = 1286
+    Height = 24
+    Top = 430
+    Width = 26
+    Shape = stTriangleRight
+  end
+  object Platform19: TShape
+    Left = 1173
+    Height = 41
+    Top = 527
+    Width = 172
+    Anchors = [akBottom]
+  end
+  object WinLabel: TLabel
+    Left = 512
+    Height = 117
+    Top = 184
+    Width = 376
+    Caption = 'YOU WIN !'
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -96
+    Font.Name = 'Impact'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+    Visible = False
+  end
+  object Spike14: TShape
+    Left = 845
+    Height = 24
+    Top = 544
+    Width = 24
+    Anchors = [akBottom]
+    Shape = stTriangle
+  end
+  object Spike15: TShape
+    Left = 872
+    Height = 24
+    Top = 544
+    Width = 24
+    Anchors = [akBottom]
+    Shape = stTriangle
+  end
+  object Spike16: TShape
+    Left = 899
+    Height = 24
+    Top = 544
+    Width = 24
+    Anchors = [akBottom]
+    Shape = stTriangle
+  end
+  object Spike17: TShape
+    Left = 926
+    Height = 24
+    Top = 544
+    Width = 24
+    Anchors = [akBottom]
+    Shape = stTriangle
+  end
+  object Spike18: TShape
+    Left = 954
+    Height = 24
+    Top = 544
+    Width = 24
+    Anchors = [akBottom]
+    Shape = stTriangle
+  end
+  object Spike19: TShape
+    Left = 983
+    Height = 24
+    Top = 544
+    Width = 24
+    Anchors = [akBottom]
+    Shape = stTriangle
+  end
+  object Spike20: TShape
+    Left = 1009
+    Height = 24
+    Top = 544
+    Width = 24
+    Anchors = [akBottom]
+    Shape = stTriangle
+  end
+  object Spike21: TShape
+    Left = 1036
+    Height = 24
+    Top = 544
+    Width = 24
+    Anchors = [akBottom]
+    Shape = stTriangle
+  end
+  object Spike22: TShape
+    Left = 1063
+    Height = 24
+    Top = 544
+    Width = 24
+    Anchors = [akBottom]
+    Shape = stTriangle
+  end
+  object Spike23: TShape
+    Left = 1092
+    Height = 24
+    Top = 544
+    Width = 24
+    Anchors = [akBottom]
+    Shape = stTriangle
+  end
+  object Spike24: TShape
+    Left = 1119
+    Height = 24
+    Top = 544
+    Width = 24
+    Anchors = [akBottom]
+    Shape = stTriangle
+  end
+  object Spike25: TShape
+    Left = 1147
+    Height = 24
+    Top = 544
+    Width = 24
+    Anchors = [akBottom]
+    Shape = stTriangle
+  end
+  object Platform13: TShape
+    Left = 935
+    Height = 17
+    Top = 127
+    Width = 72
+    Anchors = [akBottom]
+  end
+  object spike26: TShape
+    Left = 1000
+    Height = 17
+    Top = 127
+    Width = 79
+    Anchors = [akBottom]
+    Brush.Color = clRed
+  end
+  object Platform15: TShape
+    Left = 1025
+    Height = 17
+    Top = 271
+    Width = 72
+    Anchors = [akBottom]
+  end
+  object spike28: TShape
+    Left = 1093
+    Height = 17
+    Top = 271
+    Width = 88
+    Anchors = [akBottom]
+    Brush.Color = clRed
+  end
+  object Platform16: TShape
+    Left = 1181
+    Height = 17
+    Top = 271
+    Width = 72
+    Anchors = [akBottom]
+  end
+  object spike29: TShape
+    Left = 1249
+    Height = 17
+    Top = 271
+    Width = 88
+    Anchors = [akBottom]
+    Brush.Color = clRed
+  end
+  object Platform17: TShape
+    Left = 920
+    Height = 17
+    Top = 416
+    Width = 82
+    Anchors = [akBottom]
+  end
+  object spike30: TShape
+    Left = 844
+    Height = 17
+    Top = 415
+    Width = 76
+    Anchors = [akBottom]
+    Brush.Color = clRed
+  end
+  object spike31: TShape
+    Left = 848
+    Height = 17
+    Top = 127
+    Width = 88
+    Anchors = [akBottom]
+    Brush.Color = clRed
+  end
+  object spike32: TShape
+    Left = 976
+    Height = 17
+    Top = 271
+    Width = 51
+    Anchors = [akBottom]
+    Brush.Color = clRed
+  end
+  object Platform14: TShape
+    Left = 1178
+    Height = 17
+    Top = 127
+    Width = 72
+    Anchors = [akBottom]
+  end
+  object spike33: TShape
+    Left = 1249
+    Height = 17
+    Top = 127
+    Width = 88
+    Anchors = [akBottom]
+    Brush.Color = clRed
+  end
+  object spike27: TShape
+    Left = 719
+    Height = 16
+    Top = 136
+    Width = 64
+    Anchors = [akBottom]
+    Brush.Color = clRed
+  end
+  object Platform12: TShape
+    Left = 648
+    Height = 17
+    Top = 135
+    Width = 72
+    Anchors = [akBottom]
+    OnChangeBounds = Platform12ChangeBounds
+  end
+  object Timer1: TTimer
+    Interval = 10
+    OnTimer = Timer1Timer
+    Left = 128
+    Top = 88
+  end
+end
